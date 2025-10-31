@@ -1,4 +1,4 @@
-import { Youtube, Mail, TrendingUp, BarChart3, Clock, Target, AlertCircle, Twitter, Instagram, Facebook, MessageCircle } from 'lucide-react'
+import { Youtube, Mail, TrendingUp, BarChart3, Clock, Target, AlertCircle, Twitter, Instagram, Facebook, MessageCircle, Video } from 'lucide-react'
 import { GarlicBackground, GarlicIcon } from './components/GarlicBackground'
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-gray-300 hover:text-emerald-400 transition">About</a>
               <a href="#philosophy" className="text-gray-300 hover:text-emerald-400 transition">Trading Style</a>
+              <a href="#live" className="text-gray-300 hover:text-emerald-400 transition">Live Stream</a>
               <a href="#videos" className="text-gray-300 hover:text-emerald-400 transition">Videos</a>
               <a href="#contact" className="text-gray-300 hover:text-emerald-400 transition">Contact</a>
             </div>
@@ -148,8 +149,63 @@ function App() {
         </div>
       </section>
 
+      {/* Live Stream Section */}
+      <section id="live" className="py-20 px-6 bg-gray-800/50">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold text-center mb-4">
+            <span className="text-gradient">Live Trading Stream</span>
+          </h2>
+          <p className="text-center text-gray-400 mb-8">
+            Watch live market analysis and trading sessions in real-time
+          </p>
+          
+          <div className="bg-gray-800 rounded-xl p-4 md:p-8 border border-gray-700">
+            {/* YouTube Live Embed */}
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/live_stream?channel=UCYourChannelID"
+                title="Trade Garlic Live Stream"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            
+            <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-4 bg-gray-900/50 rounded-lg p-4">
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                  </span>
+                  <span className="text-gray-300 font-semibold">LIVE</span>
+                </div>
+                <span className="text-gray-400">|</span>
+                <span className="text-gray-400">Market Analysis & Trading</span>
+              </div>
+              <a 
+                href="https://youtube.com/@tradegarlic/live" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg font-semibold transition transform hover:scale-105"
+              >
+                <Youtube size={20} />
+                Watch on YouTube
+              </a>
+            </div>
+            
+            <div className="mt-4 p-4 bg-blue-900/20 border border-blue-700/50 rounded-lg">
+              <p className="text-sm text-blue-300">
+                <strong>📺 Not seeing a stream?</strong> Check my schedule on YouTube or come back during market hours (usually 9:30 AM - 4:00 PM ET)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* YouTube Section */}
-      <section id="videos" className="py-20 px-6 bg-gray-800/50">
+      <section id="videos" className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-4">
             Daily <span className="text-gradient">Market Analysis</span>
